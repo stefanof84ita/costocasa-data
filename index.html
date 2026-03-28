@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>CasaChiara - Dati OMI</title>
+  <title>CasaChiara - Dati Immobiliari</title>
   <style>
     body { font-family: sans-serif; max-width: 600px; margin: 40px auto; padding: 0 20px; }
     h1 { color: #1a73e8; }
@@ -11,25 +11,48 @@
   </style>
 </head>
 <body>
-  <h1>CasaChiara - API Dati OMI</h1>
-  <p>Dati immobiliari dall'Osservatorio Mercato Immobiliare (Agenzia delle Entrate).</p>
-  <p>468 comuni italiani con prezzi medi di affitto e vendita al m².</p>
+  <h1>CasaChiara - API Dati Immobiliari</h1>
+  <p>Dati immobiliari italiani per l'estensione CasaChiara.</p>
 
   <h2>Endpoint</h2>
   <div class="endpoint">
-    <code>GET /omi.json</code> — Dataset completo (20KB)
+    <code>GET /omi.json</code> — Prezzi medi di zona (468 comuni, 20KB)
+  </div>
+  <div class="endpoint">
+    <code>GET /costi.json</code> — <strong>NUOVO!</strong> Costi comunali reali: TARI, IMU, spese condominiali (70+ comuni, 8KB)
   </div>
 
-  <h2>Formato</h2>
+  <h2>Formato omi.json</h2>
   <pre><code>{
   "milano": { "r": [4.2, 23.4], "s": [1200, 5500] },
   ...
 }</code></pre>
-  <p><code>r</code> = affitto [min, max] in €/m²/mese<br>
-  <code>s</code> = vendita [min, max] in €/m²</p>
+  <p><code>r</code> = affitto [min, max] in &euro;/m&sup2;/mese<br>
+  <code>s</code> = vendita [min, max] in &euro;/m&sup2;</p>
 
-  <h2>Fonte</h2>
-  <p>Agenzia delle Entrate - OMI. Elaborazione <a href="https://github.com/ondata/quotazioni-immobiliari-agenzia-entrate">onData</a>.</p>
+  <h2>Formato costi.json</h2>
+  <pre><code>{
+  "citta": {
+    "milano": { "tari": 3.68, "imu": 1.00, "condo": 2.03, "regione": "lombardia" },
+    ...
+  },
+  "regioni": {
+    "lombardia": { "tari": 3.28, "imu": 0.80, "condo": 1.45 },
+    ...
+  },
+  "default": { "tari": 4.25, "imu": 0.68, "condo": 1.15 }
+}</code></pre>
+  <p><code>tari</code> = TARI annua per m&sup2; (&euro;)<br>
+  <code>imu</code> = IMU effettiva come % del valore di mercato (annua)<br>
+  <code>condo</code> = spese condominiali medie mensili per m&sup2; (&euro;)</p>
+
+  <h2>Fonti</h2>
+  <p>
+    <strong>OMI</strong>: Agenzia delle Entrate - OMI. Elaborazione <a href="https://github.com/ondata/quotazioni-immobiliari-agenzia-entrate">onData</a>.<br>
+    <strong>TARI</strong>: Osservatorio prezzi e tariffe Cittadinanzattiva 2025.<br>
+    <strong>IMU</strong>: Dipartimento Finanze MEF / Delibere comunali 2025.<br>
+    <strong>Condominio</strong>: Indagine Changes Unipol / ANACI 2025.
+  </p>
 
   <h2>CORS</h2>
   <p>GitHub Pages abilita CORS automaticamente. Le richieste cross-origin funzionano senza configurazione.</p>
