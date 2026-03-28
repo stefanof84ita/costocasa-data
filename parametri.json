@@ -1,0 +1,374 @@
+{
+  "meta": {
+    "version": 1,
+    "aggiornato": "2025-03",
+    "fonti": {
+      "rendimenti": "Idealista Indice Rendimenti Q1 2026, Il Sole 24 Ore",
+      "affitti_brevi": "AirDNA, Inside Airbnb, Istat Turismo 2025",
+      "assicurazione": "IVASS Bollettino Statistico 2025, ANIA",
+      "utenze": "ARERA Relazione Annuale 2025, Facile.it Osservatorio Energia",
+      "trend_prezzi": "Agenzia delle Entrate OMI Rapporto Immobiliare 2025, Idealista",
+      "notaio": "Consiglio Nazionale del Notariato, Notaio Facile",
+      "tasse": "Agenzia delle Entrate, Legge di Bilancio 2025",
+      "agenzia": "FIMAA, Tecnocasa Market Report 2025"
+    },
+    "note": "I valori sono stime basate su fonti ufficiali e report di settore. Dove non disponibile il dato comunale, si usa il regionale o la macro-area."
+  },
+
+  "tasse": {
+    "cedolare_secca": {
+      "canone_libero": 0.21,
+      "canone_concordato": 0.10,
+      "breve_primo_immobile": 0.21,
+      "breve_dal_secondo": 0.26
+    },
+    "imposta_registro": {
+      "prima_casa": 0.02,
+      "seconda_casa": 0.09,
+      "minimo_euro": 1000
+    },
+    "imposta_ipotecaria_catastale": {
+      "prima_casa_fissa": 100,
+      "seconda_casa_percentuale": 0.01,
+      "da_costruttore_fissa": 400
+    },
+    "iva_acquisto": {
+      "prima_casa_costruttore": 0.04,
+      "seconda_casa_costruttore": 0.10,
+      "lusso_costruttore": 0.22
+    },
+    "irpef_scaglioni_2025": [
+      { "fino_a": 28000, "aliquota": 0.23 },
+      { "fino_a": 50000, "aliquota": 0.35 },
+      { "fino_a": 999999999, "aliquota": 0.43 }
+    ],
+    "addizionali_regionali_medie": {
+      "lombardia": 0.0173, "lazio": 0.0173, "campania": 0.0203,
+      "piemonte": 0.0173, "toscana": 0.0142, "emilia-romagna": 0.0173,
+      "veneto": 0.0123, "liguria": 0.0173, "sicilia": 0.0173,
+      "puglia": 0.0173, "sardegna": 0.0173, "calabria": 0.0203,
+      "friuli-venezia giulia": 0.0070, "trentino-alto adige": 0.0123,
+      "umbria": 0.0173, "marche": 0.0173, "abruzzo": 0.0173,
+      "basilicata": 0.0173, "molise": 0.0173, "valle d'aosta": 0.0123,
+      "default": 0.0173
+    }
+  },
+
+  "rendimento_locativo_lordo": {
+    "_nota": "Rendimento lordo annuo = (canone annuo / prezzo acquisto). Fonte: Idealista Q1 2026",
+    "citta": {
+      "genova": 0.076, "palermo": 0.074, "catania": 0.072,
+      "messina": 0.070, "taranto": 0.068, "trapani": 0.067,
+      "bari": 0.065, "reggio calabria": 0.065, "brindisi": 0.064,
+      "cosenza": 0.063, "catanzaro": 0.062, "agrigento": 0.061,
+      "lecce": 0.060, "napoli": 0.058, "cagliari": 0.057,
+      "pescara": 0.056, "salerno": 0.055, "sassari": 0.055,
+      "verona": 0.066, "torino": 0.062, "bologna": 0.055,
+      "roma": 0.055, "padova": 0.054, "trieste": 0.053,
+      "brescia": 0.052, "bergamo": 0.051, "modena": 0.050,
+      "parma": 0.049, "perugia": 0.048, "milano": 0.048,
+      "firenze": 0.045, "venezia": 0.044, "como": 0.042,
+      "bolzano": 0.038, "siena": 0.040, "trento": 0.042,
+      "pisa": 0.050, "livorno": 0.052, "rimini": 0.055,
+      "ravenna": 0.050, "ferrara": 0.052, "ancona": 0.051,
+      "vicenza": 0.050, "treviso": 0.048, "novara": 0.055,
+      "piacenza": 0.053, "cremona": 0.054, "mantova": 0.052,
+      "pavia": 0.050, "lodi": 0.053, "monza": 0.046,
+      "varese": 0.047, "lecco": 0.044, "sondrio": 0.045,
+      "la spezia": 0.052, "savona": 0.050, "imperia": 0.048,
+      "l'aquila": 0.048, "campobasso": 0.055, "potenza": 0.050,
+      "aosta": 0.040, "udine": 0.052, "pordenone": 0.050,
+      "gorizia": 0.052, "belluno": 0.042, "rovigo": 0.053,
+      "asti": 0.058, "alessandria": 0.060, "pistoia": 0.048,
+      "lucca": 0.046
+    },
+    "regioni": {
+      "lombardia": 0.048, "lazio": 0.055, "campania": 0.058,
+      "piemonte": 0.060, "toscana": 0.046, "emilia-romagna": 0.052,
+      "veneto": 0.052, "liguria": 0.058, "sicilia": 0.070,
+      "puglia": 0.062, "sardegna": 0.056, "calabria": 0.063,
+      "friuli-venezia giulia": 0.052, "trentino-alto adige": 0.040,
+      "umbria": 0.048, "marche": 0.051, "abruzzo": 0.052,
+      "basilicata": 0.050, "molise": 0.055, "valle d'aosta": 0.040
+    },
+    "default": 0.052
+  },
+
+  "affitti_brevi": {
+    "_nota": "Dati medi annualizzati. Occupancy = tasso medio annuo. Tariffa = prezzo medio/notte per bilocale standard. Fonti: AirDNA, Istat Turismo, Inside Airbnb 2025",
+    "citta": {
+      "roma":     { "occupancy": 0.67, "tariffa_notte": 130, "stagionalita": "media" },
+      "milano":   { "occupancy": 0.64, "tariffa_notte": 120, "stagionalita": "bassa" },
+      "firenze":  { "occupancy": 0.72, "tariffa_notte": 140, "stagionalita": "alta" },
+      "venezia":  { "occupancy": 0.71, "tariffa_notte": 150, "stagionalita": "alta" },
+      "napoli":   { "occupancy": 0.62, "tariffa_notte": 95, "stagionalita": "media" },
+      "torino":   { "occupancy": 0.52, "tariffa_notte": 80, "stagionalita": "bassa" },
+      "bologna":  { "occupancy": 0.60, "tariffa_notte": 100, "stagionalita": "media" },
+      "palermo":  { "occupancy": 0.55, "tariffa_notte": 75, "stagionalita": "alta" },
+      "genova":   { "occupancy": 0.48, "tariffa_notte": 70, "stagionalita": "bassa" },
+      "catania":  { "occupancy": 0.53, "tariffa_notte": 72, "stagionalita": "alta" },
+      "bari":     { "occupancy": 0.50, "tariffa_notte": 70, "stagionalita": "media" },
+      "verona":   { "occupancy": 0.62, "tariffa_notte": 105, "stagionalita": "media" },
+      "cagliari": { "occupancy": 0.50, "tariffa_notte": 68, "stagionalita": "alta" },
+      "trieste":  { "occupancy": 0.48, "tariffa_notte": 72, "stagionalita": "bassa" },
+      "siena":    { "occupancy": 0.58, "tariffa_notte": 110, "stagionalita": "alta" },
+      "lecce":    { "occupancy": 0.48, "tariffa_notte": 65, "stagionalita": "alta" },
+      "rimini":   { "occupancy": 0.55, "tariffa_notte": 90, "stagionalita": "molto_alta" },
+      "como":     { "occupancy": 0.60, "tariffa_notte": 120, "stagionalita": "alta" },
+      "taormina": { "occupancy": 0.62, "tariffa_notte": 130, "stagionalita": "molto_alta" },
+      "amalfi":   { "occupancy": 0.58, "tariffa_notte": 160, "stagionalita": "molto_alta" },
+      "positano": { "occupancy": 0.55, "tariffa_notte": 200, "stagionalita": "molto_alta" },
+      "polignano a mare": { "occupancy": 0.52, "tariffa_notte": 95, "stagionalita": "alta" },
+      "matera":   { "occupancy": 0.50, "tariffa_notte": 85, "stagionalita": "media" },
+      "perugia":  { "occupancy": 0.45, "tariffa_notte": 65, "stagionalita": "media" },
+      "lucca":    { "occupancy": 0.55, "tariffa_notte": 95, "stagionalita": "alta" },
+      "pisa":     { "occupancy": 0.58, "tariffa_notte": 85, "stagionalita": "media" },
+      "padova":   { "occupancy": 0.50, "tariffa_notte": 75, "stagionalita": "bassa" },
+      "brescia":  { "occupancy": 0.45, "tariffa_notte": 70, "stagionalita": "media" },
+      "bergamo":  { "occupancy": 0.52, "tariffa_notte": 75, "stagionalita": "bassa" },
+      "salerno":  { "occupancy": 0.48, "tariffa_notte": 68, "stagionalita": "alta" },
+      "trapani":  { "occupancy": 0.48, "tariffa_notte": 60, "stagionalita": "alta" },
+      "sassari":  { "occupancy": 0.42, "tariffa_notte": 58, "stagionalita": "alta" },
+      "pescara":  { "occupancy": 0.45, "tariffa_notte": 60, "stagionalita": "alta" },
+      "ancona":   { "occupancy": 0.42, "tariffa_notte": 58, "stagionalita": "media" },
+      "la spezia": { "occupancy": 0.55, "tariffa_notte": 90, "stagionalita": "alta" }
+    },
+    "regioni": {
+      "lombardia":            { "occupancy": 0.55, "tariffa_notte": 85 },
+      "lazio":                { "occupancy": 0.60, "tariffa_notte": 100 },
+      "campania":             { "occupancy": 0.50, "tariffa_notte": 80 },
+      "piemonte":             { "occupancy": 0.45, "tariffa_notte": 70 },
+      "toscana":              { "occupancy": 0.60, "tariffa_notte": 105 },
+      "emilia-romagna":       { "occupancy": 0.52, "tariffa_notte": 80 },
+      "veneto":               { "occupancy": 0.58, "tariffa_notte": 95 },
+      "liguria":              { "occupancy": 0.50, "tariffa_notte": 80 },
+      "sicilia":              { "occupancy": 0.50, "tariffa_notte": 68 },
+      "puglia":               { "occupancy": 0.48, "tariffa_notte": 70 },
+      "sardegna":             { "occupancy": 0.48, "tariffa_notte": 72 },
+      "calabria":             { "occupancy": 0.38, "tariffa_notte": 55 },
+      "friuli-venezia giulia":{ "occupancy": 0.45, "tariffa_notte": 68 },
+      "trentino-alto adige":  { "occupancy": 0.58, "tariffa_notte": 95 },
+      "umbria":               { "occupancy": 0.45, "tariffa_notte": 65 },
+      "marche":               { "occupancy": 0.42, "tariffa_notte": 58 },
+      "abruzzo":              { "occupancy": 0.42, "tariffa_notte": 55 },
+      "basilicata":           { "occupancy": 0.42, "tariffa_notte": 60 },
+      "molise":               { "occupancy": 0.30, "tariffa_notte": 45 },
+      "valle d'aosta":        { "occupancy": 0.52, "tariffa_notte": 90 }
+    },
+    "default": { "occupancy": 0.48, "tariffa_notte": 70 },
+    "stagionalita_moltiplicatori": {
+      "_nota": "Moltiplicatore sul prezzo medio notte per alta/bassa stagione",
+      "molto_alta": { "alta_stagione": 1.8, "bassa_stagione": 0.5 },
+      "alta":       { "alta_stagione": 1.5, "bassa_stagione": 0.6 },
+      "media":      { "alta_stagione": 1.3, "bassa_stagione": 0.75 },
+      "bassa":      { "alta_stagione": 1.15, "bassa_stagione": 0.85 }
+    },
+    "costi_gestione": {
+      "_nota": "Costi tipici gestione affitto breve, in % sul fatturato lordo",
+      "pulizie_per_checkout": 45,
+      "commissione_piattaforma": 0.03,
+      "biancheria_consumabili_mese": 80,
+      "gestione_completa_property_manager": 0.20,
+      "cedolare_secca_prima": 0.21,
+      "cedolare_secca_altre": 0.26
+    }
+  },
+
+  "assicurazione_casa": {
+    "_nota": "Costo annuo per m². Varia per zona sismica, regione e tipologia. Fonte: IVASS, ANIA 2025",
+    "regioni": {
+      "lombardia":             { "min": 0.40, "max": 0.90 },
+      "lazio":                 { "min": 0.35, "max": 0.85 },
+      "campania":              { "min": 0.45, "max": 1.10 },
+      "piemonte":              { "min": 0.35, "max": 0.80 },
+      "toscana":               { "min": 0.35, "max": 0.85 },
+      "emilia-romagna":        { "min": 0.40, "max": 0.95 },
+      "veneto":                { "min": 0.35, "max": 0.80 },
+      "liguria":               { "min": 0.40, "max": 0.90 },
+      "sicilia":               { "min": 0.35, "max": 0.95 },
+      "puglia":                { "min": 0.30, "max": 0.75 },
+      "sardegna":              { "min": 0.30, "max": 0.70 },
+      "calabria":              { "min": 0.40, "max": 1.00 },
+      "friuli-venezia giulia": { "min": 0.35, "max": 0.85 },
+      "trentino-alto adige":   { "min": 0.35, "max": 0.80 },
+      "umbria":                { "min": 0.35, "max": 0.85 },
+      "marche":                { "min": 0.35, "max": 0.90 },
+      "abruzzo":               { "min": 0.40, "max": 1.00 },
+      "basilicata":            { "min": 0.35, "max": 0.90 },
+      "molise":                { "min": 0.35, "max": 0.85 },
+      "valle d'aosta":         { "min": 0.30, "max": 0.75 }
+    },
+    "default": { "min": 0.35, "max": 0.85 },
+    "zone_sismiche_sovrapprezzo": {
+      "_nota": "Sovrapprezzo % per zona sismica. Zona 1 = massimo rischio",
+      "zona_1": 0.40,
+      "zona_2": 0.20,
+      "zona_3": 0.05,
+      "zona_4": 0.00
+    }
+  },
+
+  "utenze": {
+    "_nota": "Costo mensile per m² (luce + gas + acqua + rifiuti esclusi TARI). Fonte: ARERA 2025, Facile.it",
+    "regioni": {
+      "lombardia":             { "min": 1.35, "max": 2.25 },
+      "lazio":                 { "min": 1.25, "max": 2.10 },
+      "campania":              { "min": 1.05, "max": 1.85 },
+      "piemonte":              { "min": 1.30, "max": 2.20 },
+      "toscana":               { "min": 1.20, "max": 2.05 },
+      "emilia-romagna":        { "min": 1.30, "max": 2.15 },
+      "veneto":                { "min": 1.25, "max": 2.10 },
+      "liguria":               { "min": 1.30, "max": 2.20 },
+      "sicilia":               { "min": 1.00, "max": 1.85 },
+      "puglia":                { "min": 0.95, "max": 1.75 },
+      "sardegna":              { "min": 1.05, "max": 1.90 },
+      "calabria":              { "min": 0.90, "max": 1.70 },
+      "friuli-venezia giulia": { "min": 1.25, "max": 2.10 },
+      "trentino-alto adige":   { "min": 1.20, "max": 2.00 },
+      "umbria":                { "min": 1.15, "max": 1.95 },
+      "marche":                { "min": 1.15, "max": 1.95 },
+      "abruzzo":               { "min": 1.05, "max": 1.85 },
+      "basilicata":            { "min": 0.90, "max": 1.70 },
+      "molise":                { "min": 0.95, "max": 1.75 },
+      "valle d'aosta":         { "min": 1.25, "max": 2.15 }
+    },
+    "default": { "min": 1.15, "max": 1.95 }
+  },
+
+  "trend_prezzi_annuo": {
+    "_nota": "Variazione % annua prezzi immobiliari. Fonte: OMI Rapporto Immobiliare 2025, Idealista",
+    "citta": {
+      "milano": 0.042, "roma": 0.034, "firenze": 0.038,
+      "bologna": 0.023, "napoli": -0.015, "torino": 0.028,
+      "venezia": 0.025, "genova": 0.012, "palermo": 0.008,
+      "catania": 0.010, "bari": 0.018, "verona": 0.030,
+      "padova": 0.022, "trieste": 0.015, "brescia": 0.025,
+      "bergamo": 0.028, "modena": 0.020, "parma": 0.018,
+      "como": 0.035, "monza": 0.032, "cagliari": 0.012,
+      "lecce": 0.015, "perugia": 0.008, "siena": 0.012,
+      "rimini": 0.022, "pisa": 0.015, "lucca": 0.018,
+      "livorno": 0.010, "ravenna": 0.015, "ferrara": 0.010,
+      "ancona": 0.008, "pescara": 0.010, "salerno": 0.005,
+      "taranto": -0.005, "brindisi": 0.002, "trapani": 0.005,
+      "reggio calabria": -0.008, "cosenza": -0.005,
+      "campobasso": -0.010, "potenza": -0.008,
+      "sassari": 0.008, "messina": 0.005,
+      "trento": 0.022, "bolzano": 0.025, "aosta": 0.015,
+      "la spezia": 0.020, "savona": 0.015, "imperia": 0.012,
+      "novara": 0.018, "asti": 0.005, "alessandria": 0.002,
+      "udine": 0.015, "pordenone": 0.012, "gorizia": 0.010
+    },
+    "regioni": {
+      "lombardia": 0.035, "lazio": 0.030, "campania": 0.005,
+      "piemonte": 0.020, "toscana": 0.025, "emilia-romagna": 0.020,
+      "veneto": 0.025, "liguria": 0.015, "sicilia": 0.008,
+      "puglia": 0.012, "sardegna": 0.010, "calabria": -0.005,
+      "friuli-venezia giulia": 0.015, "trentino-alto adige": 0.022,
+      "umbria": 0.008, "marche": 0.010, "abruzzo": 0.008,
+      "basilicata": -0.005, "molise": -0.008, "valle d'aosta": 0.015
+    },
+    "default": 0.015
+  },
+
+  "costi_acquisto": {
+    "notaio": {
+      "_nota": "Onorario notaio per compravendita, per fascia di prezzo. Escluse imposte.",
+      "fasce": [
+        { "fino_a": 100000,  "onorario_min": 1500, "onorario_max": 2000 },
+        { "fino_a": 200000,  "onorario_min": 2000, "onorario_max": 2800 },
+        { "fino_a": 350000,  "onorario_min": 2500, "onorario_max": 3500 },
+        { "fino_a": 500000,  "onorario_min": 3000, "onorario_max": 4500 },
+        { "fino_a": 1000000, "onorario_min": 3500, "onorario_max": 6000 },
+        { "fino_a": 999999999, "onorario_min": 5000, "onorario_max": 8000 }
+      ]
+    },
+    "agenzia": {
+      "_nota": "Provvigione agenzia immobiliare, % sul prezzo di vendita. Fonte: FIMAA 2025",
+      "regioni": {
+        "lombardia": { "min": 0.02, "max": 0.04 },
+        "lazio": { "min": 0.02, "max": 0.04 },
+        "campania": { "min": 0.02, "max": 0.035 },
+        "piemonte": { "min": 0.02, "max": 0.035 },
+        "toscana": { "min": 0.02, "max": 0.04 },
+        "emilia-romagna": { "min": 0.02, "max": 0.04 },
+        "veneto": { "min": 0.02, "max": 0.035 },
+        "liguria": { "min": 0.02, "max": 0.04 },
+        "sicilia": { "min": 0.02, "max": 0.03 },
+        "puglia": { "min": 0.02, "max": 0.03 },
+        "sardegna": { "min": 0.02, "max": 0.03 },
+        "calabria": { "min": 0.015, "max": 0.03 },
+        "default": { "min": 0.02, "max": 0.035 }
+      },
+      "note": "Provvigione dell'acquirente. Il venditore paga separatamente una quota simile."
+    },
+    "perizia_bancaria": {
+      "min": 200,
+      "max": 400,
+      "media": 300
+    },
+    "istruttoria_mutuo": {
+      "_nota": "Costo istruttoria pratica mutuo, in % sull'importo finanziato",
+      "percentuale": 0.005,
+      "minimo": 300,
+      "massimo": 1500
+    }
+  },
+
+  "manutenzione": {
+    "_nota": "Fondo manutenzione annuo in % sul valore dell'immobile. Varia per tipologia e vetustà.",
+    "per_tipologia": {
+      "appartamento_recente": { "min": 0.003, "max": 0.007 },
+      "appartamento_vecchio": { "min": 0.007, "max": 0.012 },
+      "villa_recente":        { "min": 0.005, "max": 0.010 },
+      "villa_vecchia":        { "min": 0.010, "max": 0.020 },
+      "default":              { "min": 0.005, "max": 0.010 }
+    },
+    "per_classe_energetica": {
+      "_nota": "Sovrapprezzo manutenzione per classi energetiche basse (impianti vecchi)",
+      "A": 0.0, "B": 0.0, "C": 0.001, "D": 0.002,
+      "E": 0.003, "F": 0.004, "G": 0.005
+    }
+  },
+
+  "mutuo": {
+    "_nota": "Tassi indicativi di riferimento. Aggiornare periodicamente.",
+    "aggiornato": "2025-03",
+    "tassi_riferimento": {
+      "fisso_20_anni": { "min": 0.028, "max": 0.035 },
+      "fisso_25_anni": { "min": 0.029, "max": 0.036 },
+      "fisso_30_anni": { "min": 0.030, "max": 0.038 },
+      "variabile_euribor_spread": { "euribor_3m": 0.025, "spread_tipico": 0.012 }
+    },
+    "ltv_massimo_tipico": 0.80,
+    "ltv_under36_garanzia_consap": 0.95,
+    "durata_tipica_anni": 25,
+    "eta_massima_fine_mutuo": 75
+  },
+
+  "energia": {
+    "_nota": "Costo energia per classe energetica, €/m²/anno. Fonte: ENEA, Rapporto Annuale Efficienza Energetica 2025",
+    "costo_per_classe": {
+      "A4": { "min": 3, "max": 8 },
+      "A3": { "min": 5, "max": 12 },
+      "A2": { "min": 8, "max": 15 },
+      "A1": { "min": 10, "max": 20 },
+      "B":  { "min": 15, "max": 30 },
+      "C":  { "min": 25, "max": 45 },
+      "D":  { "min": 35, "max": 60 },
+      "E":  { "min": 50, "max": 80 },
+      "F":  { "min": 65, "max": 100 },
+      "G":  { "min": 80, "max": 130 }
+    },
+    "costo_riqualificazione_per_classe": {
+      "_nota": "Costo indicativo €/m² per migliorare di una classe energetica",
+      "da_G": 150, "da_F": 130, "da_E": 120, "da_D": 110,
+      "da_C": 150, "da_B": 200
+    },
+    "bonus_ristrutturazione_2025": {
+      "aliquota_prima_casa": 0.50,
+      "aliquota_altre": 0.36,
+      "tetto_spesa": 96000,
+      "durata_anni": 10
+    }
+  }
+}
